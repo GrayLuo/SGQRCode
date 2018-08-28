@@ -279,7 +279,7 @@
         NSURL *url = [bundle URLForResource:@"SGQRCode" withExtension:@"bundle"];
         NSBundle *imageBundle = [NSBundle bundleWithURL:url];
 
-        UIImage *image = [UIImage imageWithContentsOfFile:[imageBundle pathForResource:self.scanImageName ofType:@"png"]];
+        UIImage *image = [UIImage imageNamed:self.scanImageName inBundle:imageBundle compatibleWithTraitCollection:nil];
 
         if (!image) {
             image = [UIImage imageNamed:self.scanImageName];
